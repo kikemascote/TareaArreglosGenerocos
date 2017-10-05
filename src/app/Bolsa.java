@@ -86,4 +86,9 @@ public class Bolsa <T extends Comparable<T>> implements Iterable<T>{
 		};
 	}
 	
+	@SuppressWarnings("unchecked")
+	public T[] copyArray(){
+		return (T[]) Array.newInstance(type, this.data.length);
+	}
+	
 }
